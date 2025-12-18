@@ -1,0 +1,6 @@
+@periodizacionapinet_HostAddress = http://localhost:5013
+
+GET {{periodizacionapinet_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

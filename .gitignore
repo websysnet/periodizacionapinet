@@ -1,0 +1,53 @@
+# .gitignore para proyectos .NET 10
+# Basado en las recomendaciones generales para Visual Studio / .NET
+
+# Visual Studio
+.vs/
+.vscode/
+
+# Build outputs
+bin/
+obj/
+out/
+
+# NuGet
+.nuget/
+packages/
+*.nupkg
+
+# Rider
+.idea/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Dotnet artifacts
+project.assets.json
+project.lock.json
+project.fragment.lock.json
+*.NuGet.g.props
+
+# Logs, DBs, and test results
+*.log
+TestResults/
+*.db
+*.sqlite
+
+# Debug symbols
+*.pdb
+*.mdb
+
+# Publish folder
+publish/
+
+# Coverage
+coverage*/
+*.coverage
+*.coveragexml
+
+# Other
+*.DS_Store
+node_modules/
