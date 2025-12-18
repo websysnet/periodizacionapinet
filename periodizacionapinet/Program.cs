@@ -1,5 +1,7 @@
 using System.Security.Cryptography.X509Certificates;
 
+using periodizacionapinet.Domain;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -189,86 +191,7 @@ app.UseHttpsRedirection();
 app.Run();
 
 
-public class Deporte
-{
-    public int Id { get; set; }
-    public string Nombre { get; set; }  
 
-    public string Descripcion { get; set; }
 
-    public string Categoria { get; set; }
 
-    public string imagenUrl { get; set; }
-}
-
-public class Entrenador
-{
-    public int Id { get; set; }
-    public string Nombre { get; set; }  
-
-    public Deporte Deporte { get; set; }
-
-    public int AñosExperiencia { get; set; }
-}
-
-public class Atleta
-{
-    public int Id { get; set; }
-    public string Nombre { get; set; }     
-
-    public DateTime FechaNacimiento { get; set; }
-
-    public int Edad { get; set; }
-
-     public Deporte Deporte { get; set; }
-
-     public Entrenador Entrenador { get; set; }
-}
-
-public class PlanEntrenamiento
-{
-    public int Id { get; set; }
-    public string Nombre { get; set; }  
-
-    public Deporte Deporte { get; set; }
-
-    public DateTime FechaInicio { get; set; }
-
-    public DateTime FechaFin { get; set; }
-
-    public string Descripcion { get; set; }
-
-    public int Semanas { get; set; }
-
-    public TipoPlan TipoPlan { get; set; }
-
-    public Atleta Atleta { get; set; }
-}
-
-public class SesionEntrenamiento
-{
-    public int Id { get; set; }
-    public DateTime Fecha { get; set; }  
-
-    public TimeSpan Duracion { get; set; }
-
-    public string TipoEntrenamiento { get; set; }
-
-    public int Intensidad { get; set; }
-
-    public string Objetivos { get; set; }   
-
-    public string Descripcion { get; set; }
-
-    public PlanEntrenamiento PlanEntrenamiento { get; set; }
-}
-
-public enum TipoPlan
-{
-    Resistencia,
-    Fuerza,
-    Velocidad,
-    Flexibilidad,
-    Combinado
-}
 
